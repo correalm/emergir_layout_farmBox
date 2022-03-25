@@ -1,0 +1,105 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+
+main
+    .events
+        @include base-mixins.mobile
+            width: auto
+        @include base-mixins.mobile
+            margin: 0 16px
+    .events-header
+        background-color: #fff
+        width: 776px
+        height: 88px
+        border: 1px solid #DFE0E7
+        border-radius: 8px
+        display: flex
+        box-sizing: border-box
+        margin-bottom: 16px
+        @include base-mixins.tablet
+            width: 432px
+        @include base-mixins.mobile
+            width: 390px
+
+        &-farm
+            width: 472px
+            padding-left: 16px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
+            border-right: 1px solid #E7E8EF
+
+            .events-header-farm-title
+                display: flex
+
+            .ciclo
+                margin-left: 16px
+                width: 49px
+                height: 16px
+                display: flex
+                align-items: center
+                justify-content: center
+                border: 1px solid #E7E8EF
+                border-radius: 8px
+                padding: 4px 2px
+                p
+                    color: #798AA4
+                    font-size: 12px
+                    font-weight: 400
+            p
+                font-size: 12px
+                font-weight: 400
+                color: #627389
+
+            .plantado
+                margin-top: 6px
+                width: auto
+                height: auto
+                display: flex
+                align-items: center
+                justify-content: center
+                border: 1px solid variables.$plantado
+                border-radius: 8px
+                padding: 0 4px
+                p
+                    color: variables.$plantado
+                    font-size: 12px
+                    font-weight: 700
+                    font-family: Roboto
+                    line-height: 100%
+        &-dates
+            display: flex
+            padding: 16px
+            width: 242px
+            border-right: 1px solid #E7E8EF 
+            @include base-mixins.tablet
+                display: none
+            .dates-info
+                display: flex
+                flex-direction: column
+                align-items: left
+                justify-content: center
+                margin-right: 59px
+                p
+                    font-size: 12px
+                    color: #20252B
+                    font-weight: 400
+            .dates-date
+                display: flex
+                flex-direction: column
+                align-items: right
+                justify-content: center
+                p
+                    font-size: 12px
+                    color: #798AA4
+                    font-weight: 400
+        .events-container-arrow
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 62px
+            @include base-mixins.mobile
+                transform: rotateX(180deg)
+                
+    

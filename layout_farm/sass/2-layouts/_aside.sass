@@ -1,0 +1,131 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+
+.aside-div
+    width: 248px
+    max-height: 466px
+    display: flex
+    align-content: center
+    justify-content: center
+    margin-left: 143px
+    margin-top: 66px
+    @include base-mixins.tablet
+        margin-left: 32px
+    @include base-mixins.mobile
+        width: 393px
+        margin: 16px
+.aside
+    background-color: #fff
+    width: 248px
+    height: 476px
+    border: 1px solid #dfe0e7
+    box-sizing: border-box
+    border-radius: 8px
+    @include base-mixins.mobile
+        width: 393px
+    
+    &-farm
+        border-bottom: 1px solid #E7E8EF
+        padding: 16px
+
+        .obs
+            font-size: 14px
+            color: #415164
+            font-weight: 400
+
+        .safra
+            display: flex
+            .data
+                display: flex
+                flex-direction: column
+            .data-safra
+                display: flex
+                flex-direction: column
+                margin-left: 32px
+
+        .realizada
+            display: flex
+            flex-direction: column
+            height: auto
+            padding-top: 16px
+            @include base-mixins.mobile
+                flex-direction: row
+            .nome
+                display: flex
+            .text
+                display: flex
+                flex-direction: column
+            .initial
+                margin-left: 16px
+                border: 1px solid #DFE0E7
+                width: 32px
+                height: 32px
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 50%
+                background-color: variables.$bg-color
+                &-word
+                    text-transform: uppercase
+                    color: #798AA4
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 130%
+        p
+            font-weight: 400
+            font-size: 16px
+            color: #415164
+        .aside-title
+            font-family: Inter
+            font-size: 12px
+            font-weight: 700
+            color: #20252B
+        .name-farm
+            font-family: Inter
+            font-weight: 400
+            color: #415164
+            text-transform: uppercase
+            right: 53px
+            font-size: 16px
+            line-height: 24px
+        .talhoes
+            font-family: Inter
+            font-weight: 400
+            font-size: 14px
+            line-height: 18.2px
+            color: #798AA4
+    
+    .pluv
+        @include base-mixins.mobile
+            margin-left: 32px
+        h3
+            color: #20252B
+            i
+                color: #1854C4
+        .acumulado
+            color: #627389
+            font-size: 12px
+            font-weight: 400
+    .press-container
+        padding: 16px
+        display: flex
+        justify-content: center
+        align-items: center
+    &-press
+        
+        width: 216px
+        height: 32px
+        border-radius: 4px
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid #C8CED8
+        color: #556476
+        font-weight: 700
+        font-size: 12px
+        text-transform: uppercase
+        
+        i
+            padding-right: 8px
+            font-size: 12px
+

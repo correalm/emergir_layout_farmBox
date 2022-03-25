@@ -1,0 +1,67 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+
+main
+    display: flex
+    margin-right: 145px
+    @include base-mixins.mobile
+        flex-direction: column
+    @include base-mixins.mobile
+        margin: 0
+    .main-container
+        display: flex
+        flex-direction: column
+        margin-top: 40px
+        @include base-mixins.mobile
+            margin-top: 16px
+    .events
+        margin-left: 26px
+
+    .farm-notes
+        margin-left: 24px
+        @include base-mixins.mobile
+            margin: 0 16px
+
+    .farm-notes-container
+        display: flex
+        align-items: flex-start
+        @include base-mixins.tablet
+            flex-direction: column
+        
+        
+            
+        &-card
+            box-sizing: border-box
+            width: 50%
+            background-color: #fff
+            border: 1px solid #DFE0E7
+            border-radius: 8px
+            margin-right: 16px
+            width: 380px
+            height: auto
+            display: flex
+            flex-direction: column
+            text-align: left
+            padding: 16px
+            h3
+                padding-bottom: 3px
+            @include base-mixins.tablet
+                margin-bottom: 16px
+                width: 432px
+            @include base-mixins.mobile
+                width: 390px
+                margin-right: 0
+            .image
+                display: flex
+                
+                img
+                    margin-right: 16px
+                    height: 100px
+                    width: 100px
+                    border-radius: 4px
+
+            .note
+                color: #415164
+                font-size: 14px
+                font-weight: 400
+                padding-top: 2px
